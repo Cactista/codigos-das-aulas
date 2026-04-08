@@ -1,13 +1,11 @@
 usuario_correto = "lucas"
-senha_correta = 4231
+senha_correta = 1313
 
-input("Informe o nome de usuario: ")
-int(input("Informe a senha: "))
+usuario = input("Informe o nome de usuario: ")
+senha = int(input("Informe a senha: "))
 
-if usuario_correto == 'lucas':
-    if senha_correta == senha_correta:
-        print("Conta logada com sucesso ")
-    elif senha_correta != senha_correta :
-        print("Senha Incorreta ")
+if usuario == usuario_correto and senha == senha_correta:
+    print("Conta logada com sucesso")
+    
 else:
-    print("Usario Incorreto ")
+    print("Usario ou senha Incorretos ")
