@@ -30,9 +30,14 @@ conn.commit()
 print(f"Aluno {nome_novo_aluno} com a nota {nota_novo_aluno} adicionado com sucesso ao banco de dados!\n")
 
 print("=== Dados da tabela (sem ordenação)===\n")
-cursor.execute("SELECT * FROM alunos")
+cursor.execute("SELECT * FROM alunos ORDER BY nome")
 alunos = cursor.fetchall()
 
+#for aluno in alunos:
+#   print(aluno) #mostra (id, nome, nota)
+#   print("\n" + "="*50)
+
+print("\nFOR simples mostrando nome e nota: ")
 for aluno in alunos:
-    print(aluno) #mostra (id, nome, nota)
-    print("\n" + "="*50)
+    alunos.sort
+    print(f"ID: {aluno[0]} | nome: {aluno[1]} | nota: {aluno[2]}")
